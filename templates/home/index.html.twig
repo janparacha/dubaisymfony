@@ -1,0 +1,143 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="burger"><img src="image/logo/burger-logo.png" title="Menu"></li>
+                <li><img src="image/logo/search-logo.png" title="Search"/></li>
+                <li class="logo"><img src="image/Logo/logoDUBIASHOM.png" alt="Logo_dubai-shop" width="200px" height="130px"/></li>
+                <li><img src="image/logo/VectorHeart.png" alt="favoris" title="Favoris"></li>
+                <li> <img src="image/logo/VectorBAG.png" alt="Panier" title="Panier"></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <nav>
+            <ul class="navdekstop">
+                <li> <a href="#">Parfums </a>
+                    <div class="sub-menu1">
+                    <ul>
+                        <li><a href="#">Collection Lataffa</a> </li>
+                        <li><a href="#"> Musk</a> </li> 
+                    </ul>
+                    </div>
+                </li>
+                <li><a href="#">Désodorisants</a> </li>
+                <li><a href="#">Bougies </a>
+                    <div class="sub-menu1">
+                    <ul>
+                        <li> <a href="#"> Karamat </a> </li>
+                        <li> <a href="#"> Encens </a> </li> 
+                    </ul>
+                    </div>
+                </li>
+                <li><a href="#"> Vetements femme </a></li>
+                <li><a href="#"> Bijoux </a></li>
+                <li><a href="#"> Nous contacter </a></li>
+            </ul>
+        </nav>
+        
+        <iframe width="100%" height="800px" src="https://www.youtube.com/embed/a4_qWzISsOc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        <h1>Actualités</h1>
+        <article class="actualite">
+                <h2 class="t1">Collection Lataffa</h2>
+                <img src="image/produits/IMG_7679.JPG" alt="collection Lataffa" class="imj1">
+                <p class="p1">
+                    Lataffa étant un acteur reconnu au sein des Emirats Arabes unis, il etait évident pour nous de vous faire partager ses produits de qualités
+                </p>
+                <p class="d1">
+                    Posté le <time datetime="2021-01-09">9 janvier</time> par Jan
+                </p>
+
+               <h2 class="t2">Arabian oud</h2>
+               <img src="image/produits/IMG_7688.JPG" alt="shams el amarat" class="imj2">
+               <p class="p2">
+                    Venez découvrir la crème de la crème du musk
+                </p>
+                <p class="d2">
+                    Posté le <time datetime="2021-01-01 14:00">3 janvier</time> par Jan
+                </p>
+
+                <h2 class="t3">Promotion en cours</h2>
+                <img src="image/produits/IMG_7688.JPG" alt="shams el amarat" class="imj3">
+                <p class="p3">
+                    Venez découvrir les promotions en cours pour ces soldes d'hiver. Quoi de mieux qu'un bon parfum pour oublier l'odeur glaciale de l'hiver. 
+                </p>
+                <div class="d3">
+                    Posté le <time datetime="2021-01-01 14:00">3 janvier</time> par Jan
+                </div>
+            </article>
+
+            <h1>Parfums</h1>
+                <ul class="parfum">
+                    <li> 
+                        <img src="image/produits/IMG_7676.JPG" alt="Lattafa femme"/> 
+                        <p>Lattafa femme, 100mL</p> 
+                        <p>100€</p>
+                    </li> 
+                    <li>
+                        <img src="image/produits/IMG_7677.JPG" alt="Lattafa femme"/> 
+                        <p>Lattafa homme, 100mL</p>
+                        <p>100€</p>
+                    </li>
+                    <li>
+                        <img src="image/produits/IMG_7679.JPG" alt="Lattafa femme"/> 
+                        <p>Lattafa Oppulent Musk, 100mL</p>
+                        <p>100€</p>
+                    </li>
+                    <li>
+                        <img src="image/produits/IMG_7679.JPG" alt="Lattafa femme"/> 
+                        <p>Lattafa oppulent Musk, 100mL</p>
+                        <p>100€</p>
+                   </li>
+                </ul>
+
+            <h1>Désodorisants</h1>
+            <ul class="parfum">
+                <li> 
+                    <img src="image/produits/IMG_7676.JPG" alt="Lattafa femme"/> 
+                    <p>Lattafa femme, 100mL</p> 
+                    <p>100€</p>
+                </li> 
+                <li>
+                    <img src="image/produits/IMG_7677.JPG" alt="Lattafa femme"/> 
+                    <p>Lattafa homme, 100mL</p>
+                    <p>100€</p>
+                </li>
+                <li>
+                    <img src="image/produits/IMG_7679.JPG" alt="Lattafa femme"/> 
+                    <p>Lattafa Oppulent Musk, 100mL</p>
+                    <p>100€</p>
+                </li>
+                <li>
+                    <img src="image/produits/IMG_7679.JPG" alt="Lattafa femme"/> 
+                    <p>Lattafa oppulent Musk, 100mL</p>
+                    <p>100€</p>
+                </li>
+            </ul>
+    </main>
+
+    <footer> 
+        <nav>
+            <ul>    
+                <li>A propos de nous</li>
+                <li>Mentions légales</li>
+                <li>Commandes et livraisons</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/slick/slick.min.js"></script>
+    <script type="text/javascript" src="js/Script-Slick.js"></script>
+</body>
+{% endblock %}
