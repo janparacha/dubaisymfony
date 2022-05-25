@@ -1,6 +1,6 @@
-{% extends 'base.html.twig' %}
+{% extends 'layout.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}Dubai-Shop{% endblock %}
 
 {% block body %}
 
@@ -10,7 +10,7 @@
         <h1>Actualités</h1>
         <article class="actualite">
                 <h2 class="t1">Collection Lataffa</h2>
-                <img src="{{ asset('image/produits/IMG_7679.jpg') }}" alt="collection Lataffa" class="imj1">
+                <img src="{{ asset('image/produits/IMG_7679.jpg')}}" alt="collection Lataffa" class="imj1">
                 
                 <p class="p1">
                     Lataffa étant un acteur reconnu au sein des Emirats Arabes unis, il etait évident pour nous de vous faire partager ses produits de qualités
@@ -20,7 +20,7 @@
                 </p>
 
                <h2 class="t2">Arabian oud</h2>
-               <img src="image/produits/IMG_7688.JPG" alt="shams el amarat" class="imj2">
+               <img src="{{ asset('image/produits/IMG_7688.jpg')}}" alt="shams el amarat" class="imj2">
                <p class="p2">
                     Venez découvrir la crème de la crème du musk
                 </p>
@@ -29,7 +29,7 @@
                 </p>
 
                 <h2 class="t3">Promotion en cours</h2>
-                <img src="image/produits/IMG_7688.JPG" alt="shams el amarat" class="imj3">
+                <img src="{{asset('image/produits/IMG_7688.JPG')}}" alt="shams el amarat" class="imj3">
                 <p class="p3">
                     Venez découvrir les promotions en cours pour ces soldes d'hiver. Quoi de mieux qu'un bon parfum pour oublier l'odeur glaciale de l'hiver. 
                 </p>
@@ -41,22 +41,22 @@
             <h1>Parfums</h1>
                 <ul class="parfum">
                     <li> 
-                        <img src="image/produits/IMG_7676.JPG" alt="Lattafa femme"/> 
+                        <img src="{{asset('image/produits/IMG_7676.JPG')}}" alt="Lattafa femme"/> 
                         <p>Lattafa femme, 100mL</p> 
                         <p>100€</p>
                     </li> 
                     <li>
-                        <img src="image/produits/IMG_7677.JPG" alt="Lattafa femme"/> 
+                        <img src="{{asset('image/produits/IMG_7677.JPG')}}" alt="Lattafa femme"/> 
                         <p>Lattafa homme, 100mL</p>
                         <p>100€</p>
                     </li>
                     <li>
-                        <img src="image/produits/IMG_7679.JPG" alt="Lattafa femme"/> 
+                        <img src="{{asset('image/produits/IMG_7679.JPG')}}" alt="Lattafa femme"/> 
                         <p>Lattafa Oppulent Musk, 100mL</p>
                         <p>100€</p>
                     </li>
                     <li>
-                        <img src="image/produits/IMG_7679.JPG" alt="Lattafa femme"/> 
+                        <img src="{{asset('image/produits/IMG_7679.JPG')}}" alt="Lattafa femme"/> 
                         <p>Lattafa oppulent Musk, 100mL</p>
                         <p>100€</p>
                    </li>
@@ -65,22 +65,22 @@
             <h1>Désodorisants</h1>
             <ul class="parfum">
                 <li> 
-                    <img src="image/produits/IMG_7676.JPG" alt="Lattafa femme"/> 
+                    <img src="{{asset('image/produits/IMG_7676.JPG')}}" alt="Lattafa femme"/> 
                     <p>Lattafa femme, 100mL</p> 
                     <p>100€</p>
                 </li> 
                 <li>
-                    <img src="image/produits/IMG_7677.JPG" alt="Lattafa femme"/> 
+                    <img src="{{asset('image/produits/IMG_7677.JPG')}}" alt="Lattafa femme"/> 
                     <p>Lattafa homme, 100mL</p>
                     <p>100€</p>
                 </li>
                 <li>
-                    <img src="image/produits/IMG_7679.JPG" alt="Lattafa femme"/> 
+                    <img src="{{asset('image/produits/IMG_7679.JPG')}}" alt="Lattafa femme"/> 
                     <p>Lattafa Oppulent Musk, 100mL</p>
                     <p>100€</p>
                 </li>
                 <li>
-                    <img src="image/produits/IMG_7679.JPG" alt="Lattafa femme"/> 
+                    <img src="{{asset('image/produits/IMG_7679.JPG')}}" alt="Lattafa femme"/> 
                     <p>Lattafa oppulent Musk, 100mL</p>
                     <p>100€</p>
                 </li>

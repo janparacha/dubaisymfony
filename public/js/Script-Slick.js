@@ -1,6 +1,6 @@
 $(".parfum").slick({
     mobileFirst:true,
-    infinite:false,
+    infinite:true,
     dots:true,
     accessibility:true,
     slidesToShow:1,
@@ -9,7 +9,7 @@ $(".parfum").slick({
     responsive:[{
     breakpoint:760,
     settings: {
-    slidesToShow:4
+    slidesToShow:3,
     }
 }]
 });
