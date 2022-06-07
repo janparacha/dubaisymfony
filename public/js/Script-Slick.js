@@ -9,7 +9,7 @@ $(".parfum").slick({
     responsive:[{
     breakpoint:760,
     settings: {
-    slidesToShow:3,
+    slidesToShow:4,
     }
 }]
 });

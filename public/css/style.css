@@ -1,7 +1,7 @@
 @font-face {
   font-family: "Domine";
   font-display: auto;
-  src: url("/fonts/domine/domine-bold-webfont.woff2") format("woff2"), url("/fonts/domine/domine-bold-webfont.woff") format("woff"), url("/fonts/domine/Domine-Bold.ttf") format("truetype");
+  src: url("/fonts/domine/domine-bold-webfont.woff2") format("woff2"), url("/fonts/domine/domine-bold-webfont.woff") format("woff"), url("/fonts/domine/domine-bold.ttf") format("truetype");
 }
 
 * {
@@ -14,12 +14,13 @@ main {
 }
 
 html {
-  font-family: "Domine", 'Times New Roman', Times, serif;
+  font-family: 'Domine', 'Times New Roman', Times, serif;
   font-size: 1em;
 }
 
 body {
-  margin: 1px 20px;
+  margin: 5px 20px;
+  overflow-x: hidden;
 }
 
 header, footer {
@@ -79,7 +80,9 @@ header nav li:not(li:nth-child(3)) {
 h1 {
   text-align: center;
   color: #D8A12C;
-  padding: 20px;
+  padding: 5px ;
+  margin: 30px 170px;
+  border-bottom: thick double #D8A12C;
 }
 
 h2 {
@@ -94,6 +97,7 @@ p {
 
 ul:not(nav ul) {
   background-color: #f7f7f7;
+  padding: 10px 0;
 }
 
 img:not(header img) {
@@ -110,7 +114,7 @@ img:not(header img) {
       grid-template-areas: "t1"  "imj1 " "p1" "d1";
   grid-gap: 10px;
   -ms-grid-columns: (500px)[3];
-      grid-template-columns: repeat(3, 500px);
+    grid-template-columns: repeat(3, 500px);
   grid-auto-flow: column;
   overflow-x: scroll;
   text-align: center;
@@ -165,9 +169,10 @@ iframe {
     display: flex;
     background-color: #f7f7f7;
     list-style-type: none;
-    margin: 10px;
+    margin: 10px 0px;
     -ms-flex-pack: distribute;
-        justify-content: space-around;
+        justify-content: space-between;
+    text-align: center;
   }
   .navdekstop li {
     width: 100%;
@@ -189,17 +194,23 @@ iframe {
     position: absolute;
     margin-top: 15px;
     margin-left: 15px;
-  }
+    width: 300px;
+    }
   .navdekstop li:hover .sub-menu1 ul {
     display: block;
     margin: 10px;
   }
   .navdekstop li:hover .sub-menu1 ul li {
-    width: 100%;
     padding: 10px;
     border-bottom: 1px dotted #df0000;
     text-align: left;
+    width: inherit;
   }
+  .navdekstop li:hover .sub-menu1 ul li:hover {
+  background-color: black;
+  width: inherit;
+  }
+
   .navdekstop li:hover .sub-menu1 ul li:last-child {
     border-bottom: none;
   }
@@ -268,4 +279,5 @@ iframe {
     grid-area: d3;
   }
 }
+
 /*# sourceMappingURL=style.css.map */
