@@ -2,6 +2,9 @@
 
 {% block title %}Register{% endblock %}
 
+{% block stylesheets %} <link href="{{ asset('css/register.css') }}" rel="stylesheet" /> {% endblock %}
+
+
 {% block body %}
 
     {% for flash_error in app.flashes('verify_email_error') %}
@@ -9,7 +12,7 @@
     {% endfor %}
 
     <h1>Register</h1>
-
+<div class='register'>
     {{ form_start(registrationForm) }}
         {{ form_row(registrationForm.email) }}
         {{ form_row(registrationForm.plainPassword, {
@@ -19,4 +22,6 @@
 
         <button type="submit" class="btn">Créer un compte</button>
     {{ form_end(registrationForm) }}
+
+</div>
 {% endblock %}

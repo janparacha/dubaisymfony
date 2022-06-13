@@ -1,0 +1,63 @@
+h1
+{
+    text-align: center;
+    margin: 20px;
+    border: none;
+}
+
+h2
+{
+    margin: 20px 0px;
+}
+
+.login
+{
+    margin: 15px 30px;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    background-color: #f7f7f7;
+}
+
+label
+{
+    color: #D8A12C;
+    margin: 5px;
+}
+
+/* INPUT */
+input
+{
+    height: 30px;
+    color: #df0000;
+    margin: 5px;
+    font-family: 'Domine';
+    width: 90%;
+}
+
+@media screen and (min-width: 760px) 
+{
+    input
+    {
+        width:60%
+    }
+}
+/* END INPUT */
+
+button
+{
+    height: 30px;
+    color: #D8A12C;
+    margin: 5px;
+    font-family: 'Domine';
+    font-size: 1em;
+    width: 90%;
+}
+@media screen and (min-width: 760px) 
+{
+    button
+    {
+        width:60;
+        max-width: 300px;
+    }
+}
