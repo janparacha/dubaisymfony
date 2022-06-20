@@ -1,0 +1,12 @@
+ -------------------------- -------- -------- ------ ----------------------------------- 
+  Name                       Method   Scheme   Host   Path                               
+ -------------------------- -------- -------- ------ ----------------------------------- 
+  home                       ANY      ANY      ANY    /                                  
+  app_register               ANY      ANY      ANY    /register                          
+  app_verify_email           ANY      ANY      ANY    /verify/email                      
+  app_login                  ANY      ANY      ANY    /login                             
+  app_logout                 ANY      ANY      ANY    /logout                            
+  
+  
+ -------------------------- -------- -------- ------ ----------------------------------- 
+

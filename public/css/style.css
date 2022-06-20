@@ -97,6 +97,16 @@ h1 {
   border-bottom: thick double #D8A12C;
 }
 
+a{
+  text-decoration: none;
+}
+a:visited {
+color: #D8A12C;
+}
+a:hover
+{
+  color:#df0000
+}
 h2 {
   color: #df0000;
   margin: 5px 0;

@@ -27,7 +27,7 @@
                         <li><a href='{{path('app_login')}}'><img src="{{asset('image/logo/user-interfacegold.png')}}" alt="login" title="Connexion" height="28" width='28'> </a></li>
                     {% else %}
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ path('app_logout') }}">Logout</a>
+                            <a href="{{ path('app_logout') }}">Logout</a>
                         </li>
                     {% endif %}
                 
@@ -63,8 +63,8 @@
             </ul>
         </nav>
 
-         {% for flash_error in app.flashes('verify_email_error') %}
-        <div class="alert alert-danger" role="alert">{{ flash_error }}</div>
+         {% for flash_error in app.flashes('success') %}
+        <div class="alert alert-success" role="alert">{{'Votre adresse a été validée'}}</div>
     {% endfor %}
         
         {% block body %}
