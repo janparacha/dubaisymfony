@@ -24,8 +24,8 @@ class RegistrationFormType extends AbstractType
             [
                 'choices' => 
                 [
-                'Masculin' => 'Masculin',
-                'Feminin' => 'Feminin',
+                'masculin' => 1,
+                'feminin' => 0,
                 ]
                 ])
             ->add('phone', TelType::class, 
