@@ -7,6 +7,7 @@ use App\Entity\User;
 use App\Entity\Category;
 use App\Entity\Products;
 use App\Controller\Admin\PostCrudController;
+use App\Controller\HomeController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
@@ -47,9 +48,14 @@ class DashboardController extends AbstractDashboardController
     public function configureMenuItems(): iterable
     {
         yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
+        yield MenuItem::section('Liste');
         yield MenuItem::linkToCrud('Catégories', 'fas fa-list', Category::class);
         yield MenuItem::linkToCrud('Articles', 'fas fa-list', Post::class);
         yield MenuItem::linkToCrud('Produits', 'fas fa-list', Products::class);
         yield MenuItem::linkToCrud('Utilisateurs', 'fas fa-list', User::class);
+        yield MenuItem::section('Retour sur le site');
+        yield MenuItem::linkToRoute('Home', 'fas fa-bullseye', 'home');
+        yield MenuItem::section('Déconnexion');
+        yield MenuItem::linkToLogout('Logout', ' fa fa-sign-out');
     }
 }
