@@ -47,7 +47,11 @@
         "symfony/yaml": "5.4.*",
         "symfonycasts/verify-email-bundle": "^1.10",
         "twig/extra-bundle": "^2.12|^3.0",
-        "twig/twig": "^2.12|^3.0"
+        "twig/twig": "^2.12|^3.0",
+        "symfony/debug-bundle": "5.4.*",
+        "symfony/maker-bundle": "^1.0",
+        "symfony/stopwatch": "5.4.*",
+        "symfony/web-profiler-bundle": "5.4.*"
     },
     "config": {
         "allow-plugins": {
@@ -98,9 +102,6 @@
         }
     },
     "require-dev": {
-        "symfony/debug-bundle": "5.4.*",
-        "symfony/maker-bundle": "^1.0",
-        "symfony/stopwatch": "5.4.*",
-        "symfony/web-profiler-bundle": "5.4.*"
+        
     }
 }

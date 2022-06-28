@@ -13,7 +13,7 @@ class CategoryCrudController extends AbstractCrudController
     }
 
     
-    public function configureFields(string $pageName): iterable
+    /* public function configureFields(string $pageName): iterable
     {
         return [
             IdField::new('id'),
@@ -21,5 +21,5 @@ class CategoryCrudController extends AbstractCrudController
             TextEditorField::new('description'),
         ];
     }
-    
-}
+  */  
+} 
