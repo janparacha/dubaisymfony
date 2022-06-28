@@ -28,6 +28,11 @@ class Category
     #[ORM\OneToMany(mappedBy: 'category', targetEntity: Products::class)]
     private $products;
 
+    public function __toString()
+    {
+        return $this->id . ' - ' . $this->name;
+    }
+
     public function __construct()
     {
         $this->products = new ArrayCollection();
