@@ -89,7 +89,7 @@ h1 {
   text-align: center;
   color: #D8A12C;
   padding: 5px ;
-  margin: 30px 170px;
+  margin: 30px 10px;
   border-bottom: thick double #D8A12C;
 }
 
@@ -129,8 +129,10 @@ img:not(header img) {
 /* ARTICLE */
 article {
   display: flex;
+  flex-flow: column wrap;
   justify-content: space-around;
   align-items: center;
+  text-align: center;
   background-color: #f7f7f7;
   padding: 10px;
   margin: 10px;
@@ -138,9 +140,8 @@ article {
 
 .actu
 {
-  background-color: red;
-  width:100%;
-  margin: 5px;
+  width: 100%;
+  margin: 10px 0;
 }
 
 /* FIN ARTICLE */
@@ -231,6 +232,13 @@ iframe {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+  article {
+    flex-flow: row wrap;
+  }
+  .actu
+  {
+    width: 30%;
   }
 }
 /*# sourceMappingURL=style.css.map */

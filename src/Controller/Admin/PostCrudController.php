@@ -30,7 +30,8 @@ class PostCrudController extends AbstractCrudController
         return [
             IdField::new('id')->hideOnForm(),
             TextField::new('title'),
-            ImageField::new ('picture')->setUploadDir('public/uploadpics'),
+/*          ImageField::new ('picture')->setUploadDir('public/uploadpics'),*/
+            TextField::new ('picture'),
             TextEditorField::new('content'),
             BooleanField::new('active'),
             DateTimeField::new('createdAt')->hideOnForm(),

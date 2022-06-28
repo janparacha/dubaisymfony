@@ -13,7 +13,7 @@
         {% for post in posts %}   
                 <div class='actu'>
                     <h2>{{post.title}}</h2>
-                    <img src="{{ asset('uploadpics/' ~ post.picture) }}" alt="articles"/>
+                    <img src="{{ asset(app_cdn ~ 'produits/' ~ post.picture) }}" alt="articles"/>
                     <p> {{post.content | raw}} </p>
                     <p> Posté le {{post.createdAt | date('d/m/y') }} par Jan </p>
                 </div>
