@@ -10,10 +10,6 @@
   margin: 0;
 }
 
-main {
-  height: 100%;
-}
-
 html {
   font-family: 'Domine', 'Times New Roman', Times, serif;
   font-size: 1em;
@@ -130,47 +126,24 @@ img:not(header img) {
   margin: auto;
 }
 
-/* GRID */
-.actualite {
-  display: -ms-grid;
-  display: grid;
-      grid-template-areas: "t1"  "imj1 " "p1" "d1";
-  grid-gap: 10px;
-  -ms-grid-columns: (500px)[3];
-    grid-template-columns: repeat(3, 500px);
-  grid-auto-flow: column;
-  overflow-x: scroll;
-  text-align: center;
+/* ARTICLE */
+article {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   background-color: #f7f7f7;
   padding: 10px;
   margin: 10px;
 }
 
-.t1 {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: t1;
+.actu
+{
+  background-color: red;
+  width:100%;
+  margin: 5px;
 }
 
-.imj1 {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: imj1;
-}
-
-.p1 {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  grid-area: p1;
-}
-
-.d1 {
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
-  grid-area: d1;
-}
-
-/* FIN GRID */
+/* FIN ARTICLE */
 
 .parfum p:nth-child(3) {
   color: #df0000;
@@ -259,62 +232,5 @@ iframe {
     display: -ms-flexbox;
     display: flex;
   }
-  article {
-    height: 700px;
-  }
-  .actualite {
-    all: unset;
-    display: -ms-grid;
-    display: grid;
-        grid-template-areas: "t1 t2 t3" "imj1 imj2 imj3" "p1 p2 p3" "d1 d2 d3";
-    -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr);
-    -ms-grid-rows: 0.1fr 0.5fr 0.3fr 0.2fr;
-        grid-template-rows: 0.1fr 0.5fr 0.3fr 0.2fr;
-    gap: 2%;
-    text-align: center;
-    background-color: #f7f7f7;
-  }
-  .t2 {
-    -ms-grid-row: 1;
-    -ms-grid-column: 2;
-    grid-area: t2;
-  }
-  .t3 {
-    -ms-grid-row: 1;
-    -ms-grid-column: 3;
-    grid-area: t3;
-  }
-  .imj2 {
-    -ms-grid-row: 2;
-    -ms-grid-column: 2;
-    grid-area: imj2;
-  }
-  .imj3 {
-    -ms-grid-row: 2;
-    -ms-grid-column: 3;
-    grid-area: imj3;
-  }
-  .p2 {
-    -ms-grid-row: 3;
-    -ms-grid-column: 2;
-    grid-area: p2;
-  }
-  .p3 {
-    -ms-grid-row: 3;
-    -ms-grid-column: 3;
-    grid-area: p3;
-  }
-  .d2 {
-    -ms-grid-row: 4;
-    -ms-grid-column: 2;
-    grid-area: d2;
-  }
-  .d3 {
-    -ms-grid-row: 4;
-    -ms-grid-column: 3;
-    grid-area: d3;
-  }
 }
-
 /*# sourceMappingURL=style.css.map */

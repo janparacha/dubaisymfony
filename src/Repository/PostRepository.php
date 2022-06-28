@@ -64,6 +64,16 @@ class PostRepository extends ServiceEntityRepository
     }
     */
 
+    public function PostActive ()
+    {
+        return $this->createQueryBuilder('p')
+        ->andWhere('p.active = true')
+        ->orderBy('p.createdAt', 'DESC')
+        ->getQuery()
+        ->getResult()
+        ; 
+    }
+
     /*
     public function findOneBySomeField($value): ?Post
     {

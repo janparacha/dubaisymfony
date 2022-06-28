@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+
+<title>Hello PostController!</title>
+
+{% block body %}
+
+{{ dump(posts) }}
+
+{% for post in posts %}
+        {{post.content}}
+    {% endfor %}
+
+{% endblock %}

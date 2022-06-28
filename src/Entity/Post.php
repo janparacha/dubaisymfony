@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\PostRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 #[ORM\Entity(repositoryClass: PostRepository::class)]
 class Post
@@ -16,17 +17,22 @@ class Post
     #[ORM\Column(type: 'string', length: 255)]
     private $title;
 
+    #[Gedmo\Slug(fields:['title'])]
     #[ORM\Column(type: 'string', length: 255)]
     private $slug;
 
     #[ORM\Column(type: 'text')]
     private $content;
-
+    
+    #[Gedmo\Timestampable(on:'create')]
     #[ORM\Column(type: 'datetime')]
     private $createdAt;
 
     #[ORM\Column(type: 'boolean')]
     private $active;
+
+    #[ORM\Column(type: 'string', length: 100, nullable: true)]
+    private $picture;
 
     public function getId(): ?int
     {
@@ -50,12 +56,12 @@ class Post
         return $this->slug;
     }
 
-    public function setSlug(string $slug): self
+    /* public function setSlug(string $slug): self
     {
         $this->slug = $slug;
 
         return $this;
-    }
+    } */
 
     public function getContent(): ?string
     {
@@ -74,12 +80,12 @@ class Post
         return $this->createdAt;
     }
 
-    public function setCreatedAt(\DateTimeInterface $createdAt): self
+   /*  public function setCreatedAt(\DateTimeInterface $createdAt): self
     {
         $this->createdAt = $createdAt;
 
         return $this;
-    }
+    } */
 
     public function getActive(): ?bool
     {
@@ -89,6 +95,18 @@ class Post
     public function setActive(bool $active): self
     {
         $this->active = $active;
+
+        return $this;
+    }
+
+    public function getPicture(): ?string
+    {
+        return $this->picture;
+    }
+
+    public function setPicture(?string $picture): self
+    {
+        $this->picture = $picture;
 
         return $this;
     }
