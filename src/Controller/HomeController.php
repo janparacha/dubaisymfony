@@ -12,10 +12,10 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class HomeController extends AbstractController
 {
     #[Route('/', name: 'home')]
-    public function index(PostRepository $postrepository, ProductsRepository $productsRepository): Response
+    public function index(PostRepository $postrepository, ProductsRepository $productsrepository): Response
     {
         $posts = $postrepository->PostActive();
-        $products = $productsRepository->findAll();
+        $products = $productsrepository->findAll();
         return $this->render('home/index.html.twig', [
             'posts' => $posts,
             'products' => $products,
