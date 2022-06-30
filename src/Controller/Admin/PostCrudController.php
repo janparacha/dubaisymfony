@@ -34,6 +34,7 @@ class PostCrudController extends AbstractCrudController
             TextEditorField::new('content'),
             BooleanField::new('active'),
             DateTimeField::new('createdAt')->hideOnForm(),
+            TextField::new("slug")->hideOnForm(),
         ];
     }
     

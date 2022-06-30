@@ -1,0 +1,16 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %} {{post.title}} {% endblock %}
+
+{% block body %}
+
+<h1> {{ post.title }} </h1>
+
+<div> <img src= '{{ asset(app_cdn ~'produits/' ~ post.picture) }}' alt='articles{id}' width="400px"/> </div>
+
+<div> {{post.content | raw}} </div>
+
+<div> {{post.createdAt | date }} </div>
+
+
+{% endblock %}

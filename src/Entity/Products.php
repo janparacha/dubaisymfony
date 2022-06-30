@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\ProductsRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 #[ORM\Entity(repositoryClass: ProductsRepository::class)]
 class Products
@@ -22,7 +23,7 @@ class Products
     #[ORM\Column(type: 'integer', nullable: true)]
     private $reference;
 
-    #[ORM\Column(type: 'integer')]
+    #[ORM\Column(type: 'float')]
     private $price_ht;
 
     #[ORM\Column(type: 'integer')]
@@ -36,6 +37,10 @@ class Products
 
     #[ORM\ManyToOne(targetEntity: Category::class, inversedBy: 'products')]
     private $category;
+
+    #[Gedmo\Slug(fields:['name'])]
+    #[ORM\Column(type: 'string', length: 150)]
+    private $slug;
 
     public function __toString()
     {
@@ -139,6 +144,18 @@ class Products
     public function setCategory(?Category $category): self
     {
         $this->category = $category;
+
+        return $this;
+    }
+
+    public function getSlug(): ?string
+    {
+        return $this->slug;
+    }
+
+    public function setSlug(string $slug): self
+    {
+        $this->slug = $slug;
 
         return $this;
     }

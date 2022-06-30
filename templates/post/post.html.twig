@@ -1,13 +1,18 @@
-<!DOCTYPE html>
+{% extends 'layout.html.twig' %}
 
-<title>Hello PostController!</title>
+{% block title %} Articles {% endblock %}
 
 {% block body %}
 
-{{ dump(posts) }}
+    {% for post in posts %}
 
-{% for post in posts %}
-        {{post.content}}
+        <h1> {{ post.title }} </h1>
+
+        <div> <img src= '{{ asset(app_cdn ~'produits/' ~ post.picture) }}' alt='articles{id}' width="400px"/> </div>
+
+        <div> {{post.content | raw}} </div>
+
+        <div> {{post.createdAt | date }} </div>
     {% endfor %}
 
 {% endblock %}
