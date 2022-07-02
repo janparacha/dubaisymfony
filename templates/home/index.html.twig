@@ -7,13 +7,13 @@
     <main>
        <!-- <iframe width="760" height="400sy" src="https://www.youtube.com/embed/a4_qWzISsOc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> !-->
 
-        <a href='{{ path('app_products')}}'><h1>Actualités</h1> </a>
+        <a href='{{ path('app_post')}}'><h1>Actualités</h1> </a>
 
         <article >
         {% for post in posts %}
                 <div class='actu'>
                     <h2>{{post.title}}</h2>
-                    <img src="{{ asset(app_cdn ~ 'produits/' ~ post.picture) }}" alt="articles"/>
+                    <img src="{{ asset(app_cdn ~ 'produits/' ~ post.picture) }}" alt="{{post.slug}}"/>
                     <p> {{post.content | u.truncate(50, '', false) | raw }} <a href='{{ path('post_detail', {id:post.id}) }}'>[...]</a></div> </p> 
                     <p> Posté le {{post.createdAt | date('d/m/y') }} par Jan </p>
                 </div>
@@ -26,7 +26,7 @@
                 {% for product in products %}
                     <li>  
                         <a href='{{ path('detail_products', {slug:product.slug}) }}'>
-                        <img src="{{asset(app_cdn ~ 'produits/' ~ product.picture)}}" alt="Lattafa femme"/> 
+                        <img src="{{asset(app_cdn ~ 'produits/' ~ product.picture)}}" alt="{{product.slug}}"/> 
                         <p>{{product.name}}, {{product.quantityMl}}mL</p> 
                         <p>{{product.priceHt}}€</p>
                         </a>

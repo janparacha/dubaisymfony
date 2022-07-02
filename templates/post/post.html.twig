@@ -6,13 +6,13 @@
 
     {% for post in posts %}
 
-        <h1> {{ post.title }} </h1>
+        <h2> {{ post.title }} </h2>
 
-        <div> <img src= '{{ asset(app_cdn ~'produits/' ~ post.picture) }}' alt='articles{id}' width="400px"/> </div>
+        <img src= '{{ asset(app_cdn ~'produits/' ~ post.picture) }}' alt='articles {{ post.slug }}'/>
 
-        <div> {{post.content | raw}} </div>
+        <p> {{post.content | u.truncate(1000,'',false) | raw}} </p>
 
-        <div> {{post.createdAt | date }} </div>
+        <p> {{post.createdAt | date }} </p>
     {% endfor %}
 
 {% endblock %}

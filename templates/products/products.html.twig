@@ -1,10 +1,26 @@
 {% extends 'layout.html.twig' %}
 
-{% block title %}Produits{% endblock %}
+{% block title %} Produits {% endblock %}
+
+{% block stylesheets %} <link href= "{{asset('css/items.css')}}" rel='stylesheet'> {% endblock %}
 
 
 {% block body %}
 
-<img src='https://www.ville-hem.fr/wp-content/uploads/2020/09/Page-en-construction.jpg' />
+    <h1> Produits </h1>
+
+<div class='product'>
+
+ {% for product in products %}
+
+        <a href='{{ path('detail_products', {slug:product.slug}) }}'>
+        <img src="{{asset(app_cdn ~ 'produits/' ~ product.picture)}}" alt="parfum {{product.slug}}" class='img'/> 
+        <p>{{product.name}}, {{product.quantityMl}}mL</p> 
+        <p>{{product.priceHt}}€</p>
+        </a>
+
+    {% endfor %}
+    
+</div>
 
 {% endblock %}
