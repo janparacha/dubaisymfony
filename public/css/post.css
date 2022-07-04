@@ -1,0 +1,38 @@
+@media screen and (min-width: 760px) {
+
+img:not(header img)
+    {
+        height: 35%;
+        width: 35%;
+    }
+
+.conteneur
+{
+    margin: 10px;
+}
+
+.post
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid #d8a12C;
+    width: 80%;
+    margin:auto;
+}
+
+h2 
+{
+    margin: 10px;
+}
+p 
+{
+    margin: 20px;
+}
+
+.date
+{
+    color:#d8a12C
+}
+}
+    

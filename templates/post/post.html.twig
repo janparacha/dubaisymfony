@@ -2,17 +2,22 @@
 
 {% block title %} Articles {% endblock %}
 
+{% block stylesheets %} <link href= "{{asset('css/post.css')}}" rel='stylesheet'> {% endblock %}
+
+
 {% block body %}
 
+<div class='conteneur'>
     {% for post in posts %}
+        <div class='post'>
+                <h2> {{ post.title }} </h2>
 
-        <h2> {{ post.title }} </h2>
+                <img src= '{{ asset(app_cdn ~'produits/' ~ post.picture) }}' alt='articles {{ post.slug }}'/>
 
-        <img src= '{{ asset(app_cdn ~'produits/' ~ post.picture) }}' alt='articles {{ post.slug }}'/>
+                <p> {{post.content | u.truncate(1000,'',false) | raw}} </div> </p>
 
-        <p> {{post.content | u.truncate(1000,'',false) | raw}} </p>
-
-        <p> {{post.createdAt | date }} </p>
+                <p class='date'> {{post.createdAt | date }} </p>
+        </div>
     {% endfor %}
-
+</div>
 {% endblock %}

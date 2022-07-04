@@ -30,7 +30,7 @@ class ProductsCrudController extends AbstractCrudController
             IntegerField::new('TVA'),
             IntegerField::new('stock'),
             TextField::new('picture'),
-            TextField::new('slug'),
+            TextField::new('slug')->hideOnForm(),
             AssociationField::new('category')
         ];
     }

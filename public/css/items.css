@@ -1,28 +1,25 @@
-main
-{
-    position: center;
-}
-
 @media screen and (min-width: 760px) {
 
-    .product
+.product
 {
+ display: flex;
+ flex-wrap: wrap;
+}
+
+.product a{
     display: flex;
+    flex-direction: column;
+    margin: 5px;
+    margin-bottom: 15px;
+    width: calc(25% - 40px);
+    min-width: 250px;
+    max-width: 300px;
 }
 
-a{
-    margin-bottom: 40px;
-}
-
-.img
+h2 
 {
-    width: 30%;
-    justify-content: center;
-}
-
-p
-{
-    margin: 0;
+    text-align: center;
+    margin: 20px;
 }
 
     }
