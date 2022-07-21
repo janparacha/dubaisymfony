@@ -233,6 +233,7 @@ iframe {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  margin: auto;
   }
   article {
     flex-flow: row wrap;

@@ -1,12 +1,16 @@
  -------------------------- -------- -------- ------ ----------------------------------- 
   Name                       Method   Scheme   Host   Path                               
  -------------------------- -------- -------- ------ ----------------------------------- 
+  admin                      ANY      ANY      ANY    /admin                             
+  app_error                  ANY      ANY      ANY    /error                             
   home                       ANY      ANY      ANY    /                                  
+  app_post                   ANY      ANY      ANY    /post                              
+  post_detail                ANY      ANY      ANY    /post/{id}                         
+  app_products               ANY      ANY      ANY    /products                          
+  detail_products            ANY      ANY      ANY    /products/{slug}                   
   app_register               ANY      ANY      ANY    /register                          
   app_verify_email           ANY      ANY      ANY    /verify/email                      
   app_login                  ANY      ANY      ANY    /login                             
   app_logout                 ANY      ANY      ANY    /logout                            
-  
-  
  -------------------------- -------- -------- ------ ----------------------------------- 
 
